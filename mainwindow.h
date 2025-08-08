@@ -1,5 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include <QMainWindow>
+#include <QGraphicsScene>
+#include "listaenlazadasimple.h"
+#include "pintor.h"
 
 #include <QMainWindow>
 
@@ -18,9 +22,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_toolBox_windowIconTextChanged(const QString &iconText);
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
+    QGraphicsScene* scene;
+    listaEnlazadaSimple lista;
+    pintor* Pintor;
 };
 #endif // MAINWINDOW_H

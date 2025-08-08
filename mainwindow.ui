@@ -14,21 +14,11 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGraphicsView" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>1021</width>
-      <height>651</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>4</x>
-      <y>9</y>
+      <x>10</x>
+      <y>0</y>
       <width>1011</width>
       <height>651</height>
      </rect>
@@ -38,23 +28,13 @@
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>lista simple</string>
      </attribute>
-     <widget class="QGraphicsView" name="graphicsView_2">
-      <property name="geometry">
-       <rect>
-        <x>-10</x>
-        <y>0</y>
-        <width>1031</width>
-        <height>631</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QToolBox" name="toolBox">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>160</y>
+        <x>10</x>
+        <y>170</y>
         <width>231</width>
         <height>261</height>
        </rect>
@@ -67,76 +47,46 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>231</width>
-         <height>156</height>
+         <width>214</width>
+         <height>171</height>
         </rect>
        </property>
        <attribute name="label">
-        <string>Page 1</string>
+        <string>Insertar</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton">
-        <property name="geometry">
-         <rect>
-          <x>60</x>
-          <y>110</y>
-          <width>93</width>
-          <height>29</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>insertar</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>20</y>
-          <width>113</width>
-          <height>26</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>90</x>
-          <y>60</y>
-          <width>113</width>
-          <height>26</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>63</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Posición: </string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>60</y>
-          <width>63</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Número: </string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Posición: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Número: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>insertar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="page_3">
        <attribute name="label">
-        <string>Page</string>
+        <string>Borrar</string>
        </attribute>
       </widget>
       <widget class="QWidget" name="page_2">
@@ -149,29 +99,39 @@
         </rect>
        </property>
        <attribute name="label">
-        <string>Page 2</string>
+        <string>Buscar</string>
        </attribute>
       </widget>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>20</y>
+        <width>721</width>
+        <height>581</height>
+       </rect>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>queue</string>
      </attribute>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">
-      <string>Page</string>
+      <string>stack</string>
      </attribute>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
-      <string>Page</string>
+      <string>lista doble</string>
      </attribute>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
-      <string>Page</string>
+      <string>Arbol</string>
      </attribute>
     </widget>
    </widget>

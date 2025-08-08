@@ -10,7 +10,9 @@ public:
     listaEnlazadaSimple();
 
     bool insertarCola(int n, int pos);
-
+    Nodo* getCabeza() const;
+    int getSize() const;
+    bool borrar(int valor);
 };
 
 #endif // LISTAENLAZADASIMPLE_H

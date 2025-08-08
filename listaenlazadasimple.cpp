@@ -11,6 +11,10 @@ bool listaEnlazadaSimple::insertarCola(int n, int pos){
         return false;
     }
 
+    if (cabeza == nullptr && pos != 0) {
+        return false;
+    }
+
     Nodo *nuevo = new Nodo(n);
 
     //1er caso: si esta vacio
@@ -40,6 +44,16 @@ bool listaEnlazadaSimple::insertarCola(int n, int pos){
 
 }
 
+Nodo* listaEnlazadaSimple::getCabeza() const {
+    return cabeza;
+}
+
+int listaEnlazadaSimple::getSize() const {
+    return size;
+}
+
+bool listaEnlazadaSimple::borrar(int valor){
 
 
-
+    return true;
+}

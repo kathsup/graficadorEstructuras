@@ -62,3 +62,35 @@ void MainWindow::on_pushButton_clicked(){
 
 
 
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    QString valorStr = ui->valBorrar->text();
+
+    // Validar que el campo no esté vacío
+    if (valorStr.isEmpty()) {
+        QMessageBox::warning(this, "Error", "Debe ingresar un valor para eliminar.");
+        return;
+    }
+
+    // Validar que la lista no esté vacía
+    if (lista.getSize() == 0) {
+        QMessageBox::warning(this, "Error", "La lista está vacía, no hay nada que eliminar.");
+        return;
+    }
+
+    int valor = valorStr.toInt();
+
+    // Llamar al backend para eliminar
+    if (lista.borrar(valor)) {
+        // Redibujar lista actualizada
+        Pintor->dibujar(lista);
+        QMessageBox::information(this, "Éxito", "Nodo eliminado correctamente.");
+    } else {
+        QMessageBox::warning(this, "Error", "El valor no se encontró en la lista.");
+    }
+
+    // Limpiar campo
+    ui->valBorrar->clear();
+}
+

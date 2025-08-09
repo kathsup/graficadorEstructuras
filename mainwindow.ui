@@ -40,7 +40,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="Insertar">
        <property name="geometry">
@@ -88,6 +88,48 @@
        <attribute name="label">
         <string>Borrar</string>
        </attribute>
+       <widget class="QLineEdit" name="valBorrar">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>20</y>
+          <width>113</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>63</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Borrar: </string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>100</y>
+          <width>93</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Borrar</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_2">
        <property name="geometry">
@@ -101,6 +143,45 @@
        <attribute name="label">
         <string>Buscar</string>
        </attribute>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>61</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Buscar:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="valBuscar">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>40</y>
+          <width>113</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>90</y>
+          <width>93</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Buscar</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QGraphicsView" name="graphicsView">

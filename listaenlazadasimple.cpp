@@ -54,6 +54,32 @@ int listaEnlazadaSimple::getSize() const {
 
 bool listaEnlazadaSimple::borrar(int valor){
 
+    if (cabeza==nullptr){
+        return false;
+    }
 
-    return true;
+    Nodo *borrar;
+
+    if(cabeza->valor==valor){
+        borrar = cabeza;
+        cabeza = cabeza->siguiente;
+        delete borrar;
+        size--;
+        return true;
+
+    }
+
+        Nodo *it = cabeza;
+        while(it->siguiente!=nullptr){
+            if(it->siguiente->valor==valor){
+                borrar = it->siguiente;
+                it->siguiente= borrar->siguiente;
+                delete borrar;
+                size--;
+                return true;
+
+            }
+            it = it->siguiente;
+        }
+    return false;
 }

@@ -1,8 +1,8 @@
 #include "nodeitem.h"
 #include <QPainter>
 
-nodeItem::nodeItem(const QString& val, bool isLast, QGraphicsItem* parent)
-    :QGraphicsItem(parent), value(val), isLast(isLast){}
+nodeItem::nodeItem(const QString& val, bool isLast,QColor bgColor, QGraphicsItem* parent)
+    :QGraphicsItem(parent), value(val), isLast(isLast),backgroundColor(bgColor) {}
 
 QRectF nodeItem::boundingRect() const {
     return QRectF(0, 0, 120, 60); // área donde se puede dibujar
@@ -10,7 +10,7 @@ QRectF nodeItem::boundingRect() const {
 
 void nodeItem::paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*) {
     // círculo
-    painter->setBrush(Qt::white);
+    painter->setBrush(backgroundColor);
     painter->setPen(QPen(Qt::black, 2));
     painter->drawEllipse(0, 0, 40, 40);
 

@@ -11,6 +11,7 @@ bool listaEnlazadaSimple::insertarCola(int n, int pos){
         return false;
     }
 
+    //para evitar que se coloque en una posición distinta cuando no hay nada o en un lugar que no hay
     if (cabeza == nullptr && pos != 0) {
         return false;
     }
@@ -23,11 +24,13 @@ bool listaEnlazadaSimple::insertarCola(int n, int pos){
         size++;
         return true;
     }else if (pos == 0){
+        //cuando ya hay algo pero se quiere poner en la cabeza
         nuevo->siguiente = cabeza;
         cabeza = nuevo;
         size++;
         return true;
     }else{
+        //para colocar en cualquier lado o al final
         Nodo *it = this->cabeza;
         int i = 0;
 
@@ -54,12 +57,14 @@ int listaEnlazadaSimple::getSize() const {
 
 bool listaEnlazadaSimple::borrar(int valor){
 
+    //si esta vacio
     if (cabeza==nullptr){
         return false;
     }
 
     Nodo *borrar;
 
+    //si se quiere borrar la cabeza
     if(cabeza->valor==valor){
         borrar = cabeza;
         cabeza = cabeza->siguiente;
@@ -69,6 +74,7 @@ bool listaEnlazadaSimple::borrar(int valor){
 
     }
 
+        //si se quiere borrar en cualquier otra pos o al final
         Nodo *it = cabeza;
         while(it->siguiente!=nullptr){
             if(it->siguiente->valor==valor){
@@ -83,3 +89,19 @@ bool listaEnlazadaSimple::borrar(int valor){
         }
     return false;
 }
+
+
+int listaEnlazadaSimple::buscar (int valor){
+    Nodo* it = cabeza;
+    int pos = 0;
+    while (it != nullptr) {
+        if (it->valor == valor)
+            return pos;
+        it = it->siguiente;
+        pos++;
+    }
+    return -1;
+}
+
+
+

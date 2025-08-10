@@ -13,6 +13,7 @@ public:
     Nodo* getCabeza() const;
     int getSize() const;
     bool borrar(int valor);
+    int buscar (int valor);
 };
 
 #endif // LISTAENLAZADASIMPLE_H

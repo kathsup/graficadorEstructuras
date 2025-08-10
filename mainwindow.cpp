@@ -67,13 +67,13 @@ void MainWindow::on_pushButton_2_clicked()
 {
     QString valorStr = ui->valBorrar->text();
 
-    // Validar que el campo no esté vacío
+    // que no este vacio los espacios
     if (valorStr.isEmpty()) {
         QMessageBox::warning(this, "Error", "Debe ingresar un valor para eliminar.");
         return;
     }
 
-    // Validar que la lista no esté vacía
+    // que la lista no este vacia
     if (lista.getSize() == 0) {
         QMessageBox::warning(this, "Error", "La lista está vacía, no hay nada que eliminar.");
         return;
@@ -85,7 +85,6 @@ void MainWindow::on_pushButton_2_clicked()
     if (lista.borrar(valor)) {
         // Redibujar lista actualizada
         Pintor->dibujar(lista);
-        QMessageBox::information(this, "Éxito", "Nodo eliminado correctamente.");
     } else {
         QMessageBox::warning(this, "Error", "El valor no se encontró en la lista.");
     }
@@ -93,4 +92,30 @@ void MainWindow::on_pushButton_2_clicked()
     // Limpiar campo
     ui->valBorrar->clear();
 }
+
+
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QString valorStr = ui->valBuscar->text();
+    if (valorStr.isEmpty()) {
+        QMessageBox::warning(this, "Error", "Debe ingresar un valor para buscar.");
+        return;
+    }
+
+    int valor = valorStr.toInt();
+    int pos = lista.buscar(valor);
+
+    if (pos == -1) {
+        QMessageBox::information(this, "Resultado", "El valor NO se encontró en la lista.");
+        Pintor->dibujar(lista);  // dibuja sin resaltar
+    } else {
+        //QMessageBox::information(this, "Resultado", "El valor fue encontrado y se resaltará.");
+        Pintor->dibujarConResaltado(lista, pos);  // dibuja con nodo resaltado
+    }
+
+    ui->valBuscar->clear();
+}
+
 

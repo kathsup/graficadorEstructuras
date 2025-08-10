@@ -2,10 +2,11 @@
 #define NODEITEM_H
 #include <QGraphicsItem>
 #include <QString>
+#include <QColor>
 
 class nodeItem: public QGraphicsItem{
 public:
-    nodeItem(const QString& val, bool isLast, QGraphicsItem* parent = nullptr);
+    nodeItem(const QString& val, bool isLast,QColor bgColor = Qt::white, QGraphicsItem* parent = nullptr);
 
     QRectF boundingRect() const override;
     void paint(QPainter* painter, const QStyleOptionGraphicsItem*, QWidget*) override;
@@ -13,6 +14,7 @@ public:
 private:
     QString value;
     bool isLast;
+    QColor backgroundColor = Qt::white;
 };
 
 

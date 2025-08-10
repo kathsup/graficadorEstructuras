@@ -9,6 +9,7 @@ class pintor
 public:
     pintor(QGraphicsScene* scene);
     void dibujar(const listaEnlazadaSimple& lista);
+    void dibujarConResaltado(const listaEnlazadaSimple &lista, int posResaltada);
 
 private:
     QGraphicsScene* scene;
